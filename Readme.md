@@ -19,13 +19,13 @@ Once the dependencies are installed, simply run the file.
 
 ## Development Notes
 
-Since the wesites are rendered via Javascript, PhantomJS is the natural candidate.  However the PhantomJS is built on an old version of Javascript, meaning that the website does not render properly.  This file uses Firefox as a work around, as Firefox is able to 
+Since the wesites are rendered via Javascript, PhantomJS is the natural candidate.  However the PhantomJS is built on an old version of Javascript, meaning that the website does not render properly.  This file uses Firefox as a work around, as Firefox is able to render the webpage via a more updated version of Firefox.
 
 
 
 ## Authors
 
-* **Kenneth R. Bundy** 
+This code was written by Kenneth R. Bundy
 
 ## License
 
