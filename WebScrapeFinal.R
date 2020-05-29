@@ -38,12 +38,13 @@ skips <- 17
 for (i in (offset+skips+length(scrapedData$Name)):124158){
   currentURL <- paste("https://www.regulations.gov/document?D=ED-2018-OCR-0064-", i, sep="", collapse = NULL)
   
+  #add leading 0 for 2-digit numbered sites
   if(i<1000 && i>99){
     currentURL <- paste("https://www.regulations.gov/document?D=ED-2018-OCR-0064-", "0", i, sep="", collapse = NULL)
 }
   
   remDr$navigate(currentURL)
-  Sys.sleep(waitTime) #Wait for the dang page to load
+  Sys.sleep(waitTime) #Wait for the page to load
   try(pageData <- read_html(remDr$getPageSource()[[1]]),silent = TRUE)
   
   # extract the comment from HTML file and convert to text
